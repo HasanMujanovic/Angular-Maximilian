@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-xs-10">
+    <app-shopping-edit (ingridEmit)="reciveItem($event)"></app-shopping-edit>
+    <hr />
+    <ul class="list-group">
+      <a
+        class="list-group-item"
+        style="cursor: pointer"
+        *ngFor="let ingridient of ingridients; let i = index"
+        (click)="onEditItem(i)"
+      >
+        {{ ingridient.name }} ({{ ingridient.amount }})
+      </a>
+    </ul>
+  </div>
+</div>

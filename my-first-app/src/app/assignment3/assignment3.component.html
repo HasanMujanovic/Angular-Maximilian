@@ -1,0 +1,16 @@
+<button
+  class="btn btn-primary"
+  (click)="toggleDisplay = !toggleDisplay"
+  (click)="onClickAddArray()"
+>
+  Display Deatails
+</button>
+<p *ngIf="toggleDisplay">Secret password = tuna!</p>
+
+<p
+  *ngFor="let times of clickArray; let i = index"
+  [ngClass]="{ preko5: i >= 4 }"
+  [ngStyle]="{ backgroundColor: i >= 4 ? 'blue' : 'transparent' }"
+>
+  {{ times }}
+</p>
